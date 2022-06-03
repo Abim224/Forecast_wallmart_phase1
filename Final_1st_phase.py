@@ -263,13 +263,13 @@ def main():
     test = df[int(len(df)*.75):]
     model1 = arima(df,train,test)
     model2 =sarima(df)
-    model3 =enhanced_auto_ml_model(pred)
-    #model5=enhanced_arima_model(df, train,test)
+    #model3 =enhanced_auto_ml_model(pred)
+    model5=enhanced_arima_model(df, train,test)
     model4 = auto_model(df)
-    my_dict ={'RMSE':[model1[0],model2[0],model3[0]],
-              'R2_SCORE':[model1[1],model2[1],model3[1]],
-              'MAE':[model1[2],model2[2],model3[2]],
-              'MAPE':[model1[3],model2[3],model3[3]]
+    my_dict ={'RMSE':[model1[0],model2[0],model5[0]],
+              'R2_SCORE':[model1[1],model2[1],model5[1]],
+              'MAE':[model1[2],model2[2],model5[2]],
+              'MAPE':[model1[3],model2[3],model5[3]]
              }
     my_df=pd.DataFrame(my_dict,index=['ARIMA','SARIMA','ENHANCED AUTO ML MODEL'])
     st.subheader('EVALUATION METRICS')
@@ -294,9 +294,9 @@ def main():
      #   st.line_chart(model5[4].iloc[:,0])
       #  st.balloons()
         
-    if model3[3]<float(20):
+    if model5[3]<float(20):
         st.write('ENHANCED AUTO ML MODEL is the best model for the dataset ')
-        download(model3[4])
+        download(model5[4])
         
         st.line_chart(model3[4].iloc[:,0])
         st.balloons()
