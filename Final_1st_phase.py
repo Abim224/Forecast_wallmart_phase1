@@ -315,7 +315,7 @@ def main():
         
     else:
         st.write('ARIMA MODEL WITH PIPELINE   is the best model for the dataset ')
-        download(model4[4]) 
+        download(model4.iloc[:,0]) 
         st.line_chart(model4.iloc[:,0])
         st.balloons()
         
