@@ -299,7 +299,7 @@ def main():
         st.write('ENHANCED AUTO ML MODEL is the best model for the dataset ')
         download(model5[4])
         
-        st.line_chart(model3[4].iloc[:,0])
+        st.line_chart(model5[4].iloc[:,0])
         st.balloons()
 
     elif model2[3]<float(20):
