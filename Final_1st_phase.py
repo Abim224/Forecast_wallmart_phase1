@@ -13,6 +13,7 @@ from statsmodels.tsa.stattools import adfuller,acf, pacf
 from math import sqrt
 import base64
 from prophet import Prophet
+from ThymeBoost import ThymeBoost as tb
 #from prophet.diagnostics import performance_metrics
 #from prophet.diagnostics import cross_validation
 #from prophet.plot import plot_cross_validation_metric
