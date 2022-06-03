@@ -13,9 +13,9 @@ from statsmodels.tsa.stattools import adfuller,acf, pacf
 from math import sqrt
 import base64
 from prophet import Prophet
-from prophet.diagnostics import performance_metrics
-from prophet.diagnostics import cross_validation
-from prophet.plot import plot_cross_validation_metric
+#from prophet.diagnostics import performance_metrics
+#from prophet.diagnostics import cross_validation
+#from prophet.plot import plot_cross_validation_metric
 from statsmodels.tsa.stattools import kpss
 from pmdarima import pipeline
 from pmdarima import model_selection
